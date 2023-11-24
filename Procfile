@@ -1,0 +1,1 @@
+web: sh setup.py $$ python app.py
