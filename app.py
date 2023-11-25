@@ -1,11 +1,12 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',  method=['GET'])
 def welcome():
-    return '<h>Hello, Welcome!</h>' 
+    return render_template('index.html')
+    # return '<h>Hello, Welcome!</h>' 
     
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, host='0.0.0.0', port=8080)
